@@ -1,6 +1,13 @@
 const fs = require('fs');
-const argv = process.argv[2]
-fs.readFile(argv, 'utf-8', function callback(err, data){
-	if(err) console.err(err);
-	console.log(data.split('\n').lengh);
+const path =process.argv[2] 
+const extName =process.argv[3]  // txt
+fs.readdir(path, function(err, list){
+	if(err){consol.error(error)}
+	else{
+		for(let i = 0;i<=list.length-1; i++){
+			if(fs.extName(list[i]) === '.'+ extName){
+				console.log(list[i])
+			}
+		}
+	}
 })
