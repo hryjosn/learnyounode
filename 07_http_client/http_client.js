@@ -5,3 +5,5 @@ http.get(url, (res) => {
         console.log(data)
     }).setEncoding('utf-8')
 })
+// listen
+// 偵聽

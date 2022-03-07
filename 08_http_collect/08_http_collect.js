@@ -9,14 +9,14 @@ http.get(url, (res) => {
     }));
 })
 
-//Solution 2
-// http.get(url, (res) => {
-//     let data = '';
-//     res.on("data", (chunk) => {
-//         data += chunk;
-//     }).setEncoding('utf-8')
-//     res.on("end",  () => {
-//         console.log(data.length);
-//         console.log(data);
-//       })
-// })
+// Solution 2
+http.get(url, (res) => {
+    let data = '';
+    res.on("data", (chunk) => {
+        data += chunk;
+    }).setEncoding('utf-8')
+    res.on("end",  () => {
+        console.log(data.length);
+        console.log(data);
+      })
+})
